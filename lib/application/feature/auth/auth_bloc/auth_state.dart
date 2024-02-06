@@ -8,7 +8,7 @@ final class AuthInitial extends AuthState {}
 class AuthLoding extends AuthState {}
 
 class Authenticated extends AuthState {
-  UserModel? user;
+  User? user;
   Authenticated(this.user);
 }
 
@@ -19,4 +19,3 @@ class AuthenticatedError extends AuthState {
 
   AuthenticatedError({required this.message});
 }
-    

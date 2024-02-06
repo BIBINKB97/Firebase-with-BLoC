@@ -1,5 +1,6 @@
 import 'package:firebase_bloc/application/feature/auth/auth_bloc/auth_bloc.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 class SplashPageWrapper extends StatelessWidget {
   const SplashPageWrapper({super.key});

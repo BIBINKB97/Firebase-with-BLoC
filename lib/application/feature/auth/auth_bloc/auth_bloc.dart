@@ -1,4 +1,5 @@
 import 'package:bloc/bloc.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_bloc/application/feature/auth/auth_bloc/models/user_model.dart';
 import 'package:meta/meta.dart';
 
@@ -9,7 +10,7 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
   final FirebaseAuth _auth = FirebaseAuth.instance;
   AuthBloc() : super(AuthInitial()) {
     on<CheckLoginStatusEvent>((event, emit) async {
-      UserModel? user;
+      User? user;
 
       try {
         await Future.delayed(Duration(seconds: 1), () {
